@@ -39,8 +39,8 @@
             <div class="filter pt-3 py-lg-5">
                 <div class="row">
                     <h1 class="text-primary text-center">Kode Oversigt</h1>
-                    <div class="col-md-4 offset-md-4 pt-5 pt-md-0">
-                        <input type="search" class="form-control nameSearch" placeholder="Søg på Unik kode, Kode navn eller CVR/SE nr.">
+                    <div class="col-md-4 offset-md-4 pt-5 pt-md-0" >
+                        <input type="search" class="form-control nameSearch" placeholder="Søg på Unik kode, Kode navn eller CVR/SE nr." id="redigerKode">
                     </div>
                 </div>
             </div>

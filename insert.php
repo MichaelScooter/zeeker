@@ -1,6 +1,3 @@
-Selvfølgelig, her er hele koden med ændringerne for at bruge en rulle menu (dropdown) til at vælge rabattypen:
-
-```php
 <?php
 require "settings/init.php";
 require "include/functions.php";
@@ -47,9 +44,11 @@ if (!empty($_POST["data"])) {
     if (!empty($data["kodeKunde"]) && !empty($data["kodeCvr"]) && !empty($data["kodeStart"]) && !empty($data["kodeSlut"]) && !empty($data["kodeGratisMaaneder"]) && !empty($data["kodeBindingsperiode"]) && !empty($data["kodeRabatType"]) && !empty($data["kodeRabatInput"])) {
         $db->sql($sql, $bind, false);
 
-        $statusMsg = "<h3 class='text-success pt-3 ps-3'>Kunden blev korrekt.</h3><a href='insert.php' class='text-white ps-3'><span class='text-decoration-none'>Opret en ny kunde:</span></a>";
+        $statusMsg = "<h3 class='text-success pt-3 ps-3'>Koden blev oprettet korrekt.</h3><a href='insert.php' class='text-white ps-3'><span class='text-decoration-none'>Opret en ny kunde:</span></a>";
+
+        header('Location: ' . '/zeeker/oversigt.php');
     } else {
-        $statusMsg = "<h3 class='text-danger pt-3 ps-3'>Kunden blev IKKE indsat korrekt.</h3><a href='insert.php' class='text-white ps-3'><span class='text-decoration-underline'>Prøv igen</span></a>";
+        $statusMsg = "<h3 class='text-danger pt-3 ps-3'>Koden blev IKKE indsat</h3><a href='insert.php' class='text-white ps-3'><span class='text-decoration-underline'>Prøv igen</span></a>";
     }
 }
 ?>
@@ -100,7 +99,7 @@ if (!empty($_POST["data"])) {
                         <div class="col-12 col-md-6 pt-3">
                             <div class="form-group">
                                 <label for="kodeKunde" class="fw-semibold">Kode Navn</label>
-                                <input class="form-control" type="text" name="data[kodeKunde]" id="kodeKunde" placeholder="Indtast kodens navn" value="" required>
+                                <input class="form-control" type="text" name="data[kodeKunde]" id="kodeKunde" placeholder="Indtast kodens navn" value="<?php echo !empty($data["kodeKunde"]) ? $data["kodeKunde"] : '' ?>" required>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 pt-3">
@@ -157,7 +156,7 @@ if (!empty($_POST["data"])) {
                         </div>
                         <div class="col-12 col-md-6 pt-3">
                             <div class="form-group">
-                                <label for="kodeUnik" class="fw-semibold">Unik Kode - Indtast <span class="text-danger">KUN</span> ved genbrug af kode</label>
+                                <label for="kodeUnik" class="fw-semibold">Skriv egen kode (<span class="text-danger"> Kode autogenereres, hvis felt er tomt </span>)</label>
                                 <input class="form-control opretProdukter" type="text" name="data[kodeUnik]" id="kodeUnik" maxlength="10" placeholder="Indtast rabat kode" value="">
                             </div>
                         </div>
@@ -182,6 +181,7 @@ if (!empty($_POST["data"])) {
 <script>
     tinymce.init({
         selector: 'textarea',
+        height : "200"
     });
 </script>
 

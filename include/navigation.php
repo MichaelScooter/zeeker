@@ -11,9 +11,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <a href="insert.php" class="btn bg-success text-white ms-lg-2">Opret</a>
-            <a href="oversigt.php" class="btn bg-primary text-white ms-lg-2">Oversigt</a>
-            <a href="update_kunder.php" class="btn bg-danger text-white ms-lg-2">Ret/Slet</a>
+            <a href="insert.php" class="btn bg-success text-white ms-lg-2">Opret ny kode</a>
+            <a href="oversigt.php" class="btn bg-primary text-white ms-lg-2">Kode Oversigt / Rediger kode</a>
+
         </div>
     </div>
 </nav>

@@ -17,7 +17,7 @@
             <div class="col-12 col-lg-auto pt-1 pt-lg-0">
                 <div class="d-flex align-items-center justify-content-center">
                     <img src="images/white_marker.svg" alt="Adresse">
-                    <p class="mb-0 ps-2">Slotsbryggen 10, 4800 Nykøbing F.</p>
+                    <p class="mb-0 ps-2">Slotsbryggen 14 A-D, 4800 Nykøbing F.</p>
                 </div>
             </div>
             <div class="col-12 col-lg-auto pt-1 pt-lg-0">

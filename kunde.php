@@ -65,6 +65,8 @@ $kode = $db->sql("SELECT * FROM kode WHERE kodeId = :kodeId", [":kodeId" => $_GE
 
                 <div class="col-lg-6 ps-md-5 text-center align-self-start align-self-md-center text-md-start pb-5 pt-4 pt-md-5">
 
+
+
                     <h5 class="ps-md-4 mb-0 text-primary fw-light">Kode Navn:</h5>
                     <h1 class="ps-md-4">
                         <?php echo $blog->kodeKunde; ?>
@@ -157,21 +159,17 @@ $kode = $db->sql("SELECT * FROM kode WHERE kodeId = :kodeId", [":kodeId" => $_GE
                     <div class="row ps-md-4 pt-lg-1">
                         <div class="col-12 col-md-6">
                             <div>
-                                <h5><span class="text-primary">CVR / SE nr.:</span>
-
-                                </h5>
-                                <p>
+                                <h5><span class="text-primary">CVR / SE nr.:</span></h5>
+                                <p class="pb-2">
                                     <?php echo
                                     $blog->kodeCvr;
                                     ?>
                                 </p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div>
 
+                                <a href="/zeeker/update.php?type=rediger&kodeId=<?php echo $_GET["kodeId"] ?>" class="btn-danger btn btn-lg">Rediger</a>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

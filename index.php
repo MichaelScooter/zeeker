@@ -40,9 +40,9 @@
             </div>
             <div class="col-md-6 ps-md-5 text-center align-self-start align-self-md-center text-md-start pb-5 pt-4 pt-lg-0">
                 <h1 class="ps-md-4">Rabatkoder</h1>
-                <p class="lead ps-md-4">Opret / rediger / Slet</p>
+                <p class="lead ps-md-4">Her kan du oprette unikke koder og ønsker du at redigere en kode, <br>så find koden via oversigten.</p>
                 <div class="ps-md-4 pt-lg-3">
-                    <a href="insert.php" class="btn btn-success btn-lg border-white text-white">Opret ny rabat kode</a>
+                    <a href="insert.php" class="btn btn-success btn-lg border-white text-white me-2 ">Opret ny kode</a>
                 </div>
             </div>
         </div>
